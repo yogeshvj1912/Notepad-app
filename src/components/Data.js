@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 import "./dashboard.css"
 import { ToastContainer, toast } from "react-toastify";
 
-function Data({ edata,searchTerm}) {
+function Data({ edata,searchTerm,Theme}) {
   const [notesData, setNotesData] = useState([]);
   const [isLoading,setLoading]=useState(true);
   const [showInput, setShowInput] = useState(false);
@@ -145,7 +145,7 @@ const result = notesData.filter((item)=>{
 })
 
   return (
-    <div className="data-box">
+    <div className={`data-box ${Theme?"lights-off":"lights-on"}`}>
       {
         isLoading?<h1>Loading...</h1>:<div className="notes-mainbox">
           {result.map((item,i)=>{

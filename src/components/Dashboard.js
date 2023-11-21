@@ -8,6 +8,12 @@ import "./dashboard.css"
 function Dashboard() {
   const [edata,setEdata]=useState([])
   const [searchTerm, setSearchTerm] = useState('');
+  const [Theme,setChangeThem] = useState(false);
+
+
+  const changeTheme = ()=>{
+    setChangeThem(!Theme)
+        }
 
   const DashboardValid = async()=>{
     let token = localStorage.getItem("usersdatatoken")
@@ -50,8 +56,8 @@ useEffect(() => {
    
   return (
     <div className='dashbord' > 
-            <Topbar edata={edata} handleSearch={handleSearch} searchTerm={searchTerm} />
-            <Data edata={edata} searchTerm={searchTerm}/>
+            <Topbar edata={edata} handleSearch={handleSearch} searchTerm={searchTerm} Theme={Theme} changeTheme={changeTheme}/>
+            <Data edata={edata} searchTerm={searchTerm} Theme={Theme}/>
         </div>
   )
 }
