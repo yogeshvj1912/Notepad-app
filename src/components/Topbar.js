@@ -86,7 +86,7 @@ const navigate = useNavigate()
                         </div>
                         <form className='form' onSubmit={handleSubmit} >
                             <div>
-                                <input className="heading" type="text" placeholder='HEADING' name='heading' value={user.heading}  onChange={handleChange} />
+                                <input className="heading" type="text" placeholder='HEADING' name='heading' value={user.heading}  onChange={handleChange} autoComplete="off"/>
                             </div>
                             <hr />
                             <div>
