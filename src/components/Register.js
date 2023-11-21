@@ -71,7 +71,7 @@ const Register = () => {
             // console.log("user registration succesfully done");
 
 
-            const data = await fetch("http://localhost:5000/register", {
+            const data = await fetch("https://notepad-15s7.onrender.com/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -106,11 +106,11 @@ const Register = () => {
                     <form>
                         <div className="form_input">
                             <label htmlFor="fname">Name</label>
-                            <input type="text" onChange={setVal} value={inpval.fname} name="fname" id="fname" placeholder='Enter Your Name' />
+                            <input type="text" onChange={setVal} value={inpval.fname} name="fname" id="fname" placeholder='Enter Your Name' autoComplete="off"/>
                         </div>
                         <div className="form_input">
                             <label htmlFor="email">Email</label>
-                            <input type="email" onChange={setVal} value={inpval.email} name="email" id="email" placeholder='Enter Your Email Address' />
+                            <input type="email" onChange={setVal} value={inpval.email} name="email" id="email" placeholder='Enter Your Email Address' autoComplete="off"/>
                         </div>
                         <div className="form_input">
                             <label htmlFor="password">Password</label>

@@ -42,7 +42,7 @@ const navigate = useNavigate()
             position: "top-center"
         });
      }else{
-        const data = await fetch("http://localhost:5000/notes", {
+        const data = await fetch("https://notepad-15s7.onrender.com/notes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

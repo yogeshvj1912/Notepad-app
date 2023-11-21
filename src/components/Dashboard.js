@@ -12,7 +12,7 @@ function Dashboard() {
   const DashboardValid = async()=>{
     let token = localStorage.getItem("usersdatatoken")
 
-    const res = await fetch ("http://localhost:5000/validuser",{
+    const res = await fetch ("https://notepad-15s7.onrender.com/validuser",{
         method:"GET",
         headers:{
            "Content-Type":"application/json",

@@ -24,7 +24,7 @@ setUser({...user,userId:id,heading:head,messages:mess})
 
     try {
       const  ids=await id
-      const res = await fetch(`http://localhost:5000/notes/${ids }`, {
+      const res = await fetch(`https://notepad-15s7.onrender.com/notes/${ids }`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +88,7 @@ if (userId===""){
       position: "top-center"
   });
 }else{
-  const data = await fetch("http://localhost:5000/notes", {
+  const data = await fetch("https://notepad-15s7.onrender.com/notes", {
       method: "put",
       headers: {
           "Content-Type": "application/json",
@@ -119,7 +119,7 @@ if (userId===""){
 let handleDelet=async ()=>{
 const {userId}=user
 let token = localStorage.getItem("usersdatatoken")
-const deleteData = await fetch(`http://localhost:5000/notes/${userId}`,{
+const deleteData = await fetch(`https://notepad-15s7.onrender.com/notes/${userId}`,{
   method:"delete",
   headers:{
     "Content-type":"application/json",
@@ -163,7 +163,7 @@ return(
                         </div>
                         <form className='form' >
                             <div>
-                                <input className="heading" type="text" placeholder='HEADING' name='heading' value={user.heading}  onChange={handleChange} />
+                                <input className="heading" type="text" placeholder='HEADING' name='heading' value={user.heading}  onChange={handleChange} autoComplete="off" />
                             </div>
                             <hr />
                             <div>

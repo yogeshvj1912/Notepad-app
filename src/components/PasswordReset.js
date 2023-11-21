@@ -25,7 +25,7 @@ function PasswordReset() {
                 position: "top-center"
             });
         } else {
-            const res = await fetch("http://localhost:5000/sendpasswordlink", {
+            const res = await fetch("https://notepad-15s7.onrender.com/sendpasswordlink", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -64,7 +64,7 @@ function PasswordReset() {
                     <form>
                         <div className="form_input">
                             <label htmlFor="email">Email</label>
-                            <input type="email" value={email} onChange={setVal} name="email" id="email" placeholder='Enter Your Email Address' />
+                            <input type="email" value={email} onChange={setVal} name="email" id="email" placeholder='Enter Your Email Address' autoComplete="off" />
                         </div>
 
                         <button className='btn' onClick={sendLink}>Send</button>

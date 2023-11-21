@@ -50,7 +50,7 @@ const Login = () => {
     } else {
       // console.log("user login succesfully done");
 
-      const data = await fetch("http://localhost:5000/login", {
+      const data = await fetch("https://notepad-15s7.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -94,6 +94,7 @@ const Login = () => {
                 name="email"
                 id="email"
                 placeholder="Enter Your Email Address"
+                autoComplete="off"
               />
             </div>
             <div className="form_input">
@@ -106,6 +107,7 @@ const Login = () => {
                   name="password"
                   id="password"
                   placeholder="Enter Your password"
+                  autoComplete="off"
                 />
                 <div
                   className="showpass"

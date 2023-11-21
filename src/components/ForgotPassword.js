@@ -12,7 +12,7 @@ function ForgotPassword() {
     const [password,setPassword] = useState("");
     const [message,setMessage] = useState("");
     const userValid= async()=>{
-        const res = await fetch(`http://localhost:5000/forgotpassword/${id}/${token}`,{
+        const res = await fetch(`https://notepad-15s7.onrender.com/forgotpassword/${id}/${token}`,{
             method:"GET",
             headers:{
                 "Content-Type":"application/json"
@@ -33,7 +33,7 @@ function ForgotPassword() {
     const sendpassword = async(e)=>{
         e.preventDefault();
 
-        const res = await fetch(`https://password-d4k2.onrender.com/${id}/${token}`,{
+        const res = await fetch(`https://notepad-15s7.onrender.com/${id}/${token}`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
