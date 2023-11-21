@@ -8,7 +8,7 @@ import "./dashboard.css"
 function Dashboard() {
   const [edata,setEdata]=useState([])
   const [searchTerm, setSearchTerm] = useState('');
-  const [Theme,setChangeThem] = useState(false);
+  const [Theme,setChangeThem] = useState(true);
 
 
   const changeTheme = ()=>{
